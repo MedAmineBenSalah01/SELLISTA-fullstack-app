@@ -140,7 +140,7 @@ query Categories {
 
 ## Cateway Service
 
-Endpoint: http://localhost:4000/
+Endpoint: http://localhost:4000/graphql
 
 schema stitching and search query playground usage :
 
