@@ -30,7 +30,8 @@ cd client npm install && npm run dev
 
 ## update product name 
 
-![Uploading testnameupdate.PNG…]()
+![testnameupdate](https://github.com/user-attachments/assets/9fb1e16f-477c-43cf-994f-311d813703b3)
+
 
 ## update products ui after name changing
 
