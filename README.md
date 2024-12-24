@@ -14,33 +14,34 @@ Product Management: The backend allows fetching, updating, and managing product 
 
 
 client/
-├─src/
-├── components/
-│   ├── ProductCard.vue         # Displays individual product details and allows editing.
-│   ├── Filter.vue              # Contains the filtering UI for category and price.
-│   ├── SearchBar.vue           # Contains the search UI.
-├── graphql/
-│   ├── mutations.js            # Contains GraphQL mutations for updating products.
-│   ├── queries.js              # Contains GraphQL queries for updating products.
-├── App.vue                     # Main Vue component.
-├── main.js                     # App entry point, sets up Apollo Client and mounts the app.
-├── index.css                   # Global styles using Tailwind CSS.
+├── src/
+│   ├── components/
+│   │   ├── ProductCard.vue         # Displays individual product details and allows editing.
+│   │   ├── Filter.vue              # Contains the filtering UI for category and price.
+│   │   ├── SearchBar.vue           # Contains the search UI.
+│   ├── graphql/
+│   │   ├── mutations.js            # Contains GraphQL mutations for updating products.
+│   │   ├── queries.js              # Contains GraphQL queries for updating products.
+│   ├── App.vue                     # Main Vue component.
+│   ├── main.js                     # App entry point, sets up Apollo Client and mounts the app.
+│   ├── index.css                   # Global styles using Tailwind CSS.
 
 server/
 ├── product-service/
-│   ├── data                    # Product-related GraphQL API (Federated Service).
-│   ├── utils                   # products utility
-│   ├── index.js                # Apollo Server configuration and setup.
-│   ├── resolvers.js            # resolvers.
-│   ├── schema.js               # schema.
+│   ├── data                        # Product-related GraphQL API (Federated Service).
+│   ├── utils                       # Products utility functions.
+│   ├── index.js                    # Apollo Server configuration and setup.
+│   ├── resolvers.js                # Resolvers for product-related data.
+│   ├── schema.js                   # GraphQL schema for product service.
 ├── categories-service/
-│   ├── data                    # Category-related GraphQL API (Federated Service).
-│   ├── utils                   # categories utility
-│   ├── index.js                # Apollo Server configuration and setup.
-│   ├── resolvers.js            # resolvers.
-│   ├── schema.js               # schema.
+│   ├── data                        # Category-related GraphQL API (Federated Service).
+│   ├── utils                       # Categories utility functions.
+│   ├── index.js                    # Apollo Server configuration and setup.
+│   ├── resolvers.js                # Resolvers for category-related data.
+│   ├── schema.js                   # GraphQL schema for category service.
 ├── gateway-service/
-│   ├── index.js                # Apollo Server configuration and setup.
+│   ├── index.js                    # Apollo Gateway configuration to federate services.
+
 
 
 
