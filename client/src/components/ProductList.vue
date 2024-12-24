@@ -20,7 +20,6 @@
             <input
               v-else
               v-model="editingName[product.id]"
-              @keyup.enter="updateProduct(product.id)"
               class="border rounded p-2 w-full text-gray-700"
               placeholder="Enter new name"
             />
@@ -61,35 +60,33 @@ export default {
     const editing = ref({});
     const editingName = ref({});
     const { mutate: updateProductMutation } = useMutation(UPDATE_PRODUCT_NAME);
+
+    // Toggle edit mode and update product name when "Save" is clicked
     function toggleEdit(id) {
       if (editing.value[id]) {
-        editingName.value[id] = props.products.find(product => product.id === id).name;
-      }
-      editing.value[id] = !editing.value[id];
-    }
-    async function updateProduct(id) {
-      try {
+        // Update product name if editing is completed
         const newName = editingName.value[id];
         const product = props.products.find(product => product.id === id);
         if (newName !== product.name) {
           const updatedProduct = { ...product, name: newName };
-          await updateProductMutation({ id, name: newName });
+          updateProductMutation({ id, name: newName });
           const index = props.products.findIndex(p => p.id === id);
           if (index !== -1) {
             props.products[index] = updatedProduct;
           }
         }
-        editing.value[id] = false;
-      } catch (error) {
-        console.error("Error updating product name:", error);
-        alert("Failed to update product name");
+      } else {
+        // If editing starts, set the input field to the current product name
+        editingName.value[id] = props.products.find(product => product.id === id).name;
       }
+
+      editing.value[id] = !editing.value[id];
     }
+
     return {
       editing,
       editingName,
-      toggleEdit,
-      updateProduct
+      toggleEdit
     };
   }
 };

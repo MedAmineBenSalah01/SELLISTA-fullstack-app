@@ -5,11 +5,13 @@ import App from './App.vue'
 import "./index.css"
 const cache = new InMemoryCache()
 
+
+
 const apolloClient = new ApolloClient({
   cache,
   uri: 'http://localhost:4000',
   headers : {
-    authorization :"Bearer admin"
+    authorization :`Bearer admin`
   },
   fetchPolicy: 'no-cache',
 })

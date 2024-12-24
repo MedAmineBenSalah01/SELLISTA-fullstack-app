@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap gap-8 p-6 bg-white rounded-lg shadow-md">
-    <div class="flex flex-col w-full sm:w-1/3 md:w-1/4 space-y-4">
+    <div class="flex flex-col w-full sm:w-1/3 md:w-3/4 space-y-4">
       <label for="category" class="text-sm font-medium text-gray-700 mb-2">Category</label>
       <select
         id="category"
@@ -15,7 +15,7 @@
       </select>
     </div>
 
-    <div class="flex flex-col w-full sm:w-1/3 md:w-1/4 space-y-4">
+    <div class="flex flex-col w-full sm:w-1/3 md:w-2/4 space-y-4">
       <label for="minPrice" class="text-sm font-medium text-gray-700 mb-2">Min Price</label>
       <input
         id="minPrice"
@@ -27,7 +27,7 @@
       />
     </div>
 
-    <div class="flex flex-col w-full sm:w-1/3 md:w-1/4 space-y-4">
+    <div class="flex flex-col w-full sm:w-1/3 md:w-2/4 space-y-4">
       <label for="maxPrice" class="text-sm font-medium text-gray-700 mb-2">Max Price</label>
       <input
         id="maxPrice"
