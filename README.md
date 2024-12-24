@@ -54,6 +54,13 @@ Product Management: The backend allows fetching, updating, and managing product 
 Endpoint: http://localhost:4001/graphql
 
 Playground usage :
+Query product : 
+![queryProduct](https://github.com/user-attachments/assets/d8260c55-c6f8-4472-9276-49c097f5b604)
+
+Mutation updateProductName 
+
+![updateProductName](https://github.com/user-attachments/assets/44da7523-834b-47b7-a8b8-1646f025d0f3)
+
 
 
 ## Categories Service
@@ -61,9 +68,53 @@ Endpoint: http://localhost:4001/graphql
 
 Playground usage : 
 
+Query Categories 
+
+![queryCategory](https://github.com/user-attachments/assets/c755a0a9-b9b1-4bfe-b827-e00cba002168)
+
+
 ## Cateway Service
 
 Endpoint: http://localhost:4000/
 
 schema stitching and search query playground usage :
+
+unified query :
+
+```bash
+query Products {
+  products {
+    id
+    name
+    price
+    categoryId
+    category {
+     name
+     id 
+    }
+  }
+}
+```
+
+![unifiedSchema](https://github.com/user-attachments/assets/970e1210-6570-47f2-a8df-665b95cc72fe)
+
+
+unified query search 
+
+```bash
+query($search: String) {
+products(search: $search) {
+id
+name
+price
+category {
+id
+name
+}
+}
+}
+```
+
+![Uploading unifiedschemasearch.PNG…]()
+
 
