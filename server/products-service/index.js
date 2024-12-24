@@ -3,6 +3,13 @@ const { startStandaloneServer } = require('@apollo/server/standalone');
 const { gql } = require('graphql-tag');
 const {buildFederatedSchema} = require('@apollo/federation')
 
+
+
+
+const currentUser = {
+  role: "user", 
+};
+
 let products = [
   { id: "1", name: "Laptop", price: 1200.99, categoryId: "1" },
   { id: "2", name: "Phone", price: 699.49, categoryId: "2" },
@@ -40,6 +47,12 @@ const resolvers = {
   Product : {
     category: (product) => {
       return [{ id: product.categoryId }];
+    },
+    price: (product) => {
+      if (currentUser.role === "user") {
+        return Math.round(product.price); 
+      }
+      return product.price; 
     },
   },
   Query: {

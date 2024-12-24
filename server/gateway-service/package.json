@@ -10,10 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/client": "^3.12.4",
     "@apollo/gateway": "^2.9.3",
     "@apollo/server": "^4.11.2",
     "@apollo/subgraph": "^2.9.3",
+    "cross-fetch": "^4.1.0",
     "express": "^4.21.2",
     "graphql": "^16.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
