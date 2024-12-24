@@ -26,6 +26,13 @@ client/
 │   ├── main.js                     # App entry point, sets up Apollo Client and mounts the app.
 │   ├── index.css                   # Global styles using Tailwind CSS.
 
+
+
+
+
+
+
+
 server/
 ├── product-service/
 │   ├── data                        # Product-related GraphQL API (Federated Service).
