@@ -1,18 +1,26 @@
-const typeDefs = `
-  type Product {
+const { gql } = require('graphql-tag');
+
+const typeDefs = gql`
+  type Product @key(fields:"id") {
     id: ID!
     name: String!
     price: Float!
     categoryId: ID!
+    category:[Category]
+  }
+  
+    extend type Category @key(fields:"id") {
+    id:ID! @external
+    name:String! @external
   }
 
-  type Query {
-    products: [Product!]!
+  extend type Query {
+    products(search: String): [Product!]!
   }
 
-  type Mutation {
+  extend type Mutation {
     updateProductName(id: ID!, name: String!): Product!
   }
 `;
 
-module.exports = typeDefs;
+module.exports = typeDefs
