@@ -11,6 +11,38 @@ Client :
 cd client npm install && npm run dev
 ```
 
+## main layout
+![mainlayout](https://github.com/user-attachments/assets/4a9676e9-1ae6-41bf-a00c-4cdd11b42c01)
+
+## Search for products 
+
+![search](https://github.com/user-attachments/assets/f033288f-8372-411c-83d4-502303b9e690)
+
+## filter by categories 
+
+![ndcategories](https://github.com/user-attachments/assets/4c2dbc82-ad53-48cb-8525-61a328499c08)
+
+![categoires](https://github.com/user-attachments/assets/cc880f06-0a6a-4b9f-b8fa-4d8b11587cb0)
+
+## filter by min/max price
+
+![minmaxprice](https://github.com/user-attachments/assets/b1787fea-59d3-425b-bf48-147b221b1638)
+
+## update product name 
+
+![Uploading testnameupdate.PNG…]()
+
+## update products ui after name changing
+
+![testnameupdatecomplete](https://github.com/user-attachments/assets/5fd28e0c-856e-43cc-9754-ade4c7d73c95)
+
+
+
+
+
+
+
+
 Server : 
 ## categories-service 
 
