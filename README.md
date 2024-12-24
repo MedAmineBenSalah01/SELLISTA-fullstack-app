@@ -55,11 +55,36 @@ Endpoint: http://localhost:4001/graphql
 
 Playground usage :
 Query product : 
+```bash
+query Products {
+  products {
+    id
+    name
+    price
+    categoryId
+    category {
+      name
+      id
+    }
+  }
+}
+```
 ![queryProduct](https://github.com/user-attachments/assets/d8260c55-c6f8-4472-9276-49c097f5b604)
 
 Mutation updateProductName 
 
+```bash
+mutation Mutation($updateProductNameId: ID!, $name: String!) {
+  updateProductName(id: $updateProductNameId, name: $name) {
+    name
+  }
+}
+```
 ![updateProductName](https://github.com/user-attachments/assets/44da7523-834b-47b7-a8b8-1646f025d0f3)
+
+variables added here : 
+
+![var](https://github.com/user-attachments/assets/e27ead86-c194-4aab-98ac-d3f46712dc6d)
 
 
 
@@ -69,7 +94,14 @@ Endpoint: http://localhost:4001/graphql
 Playground usage : 
 
 Query Categories 
-
+```bash
+query Categories {
+  categories {
+    name
+    id
+  }
+}
+```
 ![queryCategory](https://github.com/user-attachments/assets/c755a0a9-b9b1-4bfe-b827-e00cba002168)
 
 
@@ -115,6 +147,6 @@ name
 }
 ```
 
-![Uploading unifiedschemasearch.PNG…]()
 
+![unifiedschemasearch](https://github.com/user-attachments/assets/ba613a49-9a06-4a8f-bd6c-215be6f32add)
 
