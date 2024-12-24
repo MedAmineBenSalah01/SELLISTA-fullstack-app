@@ -48,14 +48,14 @@ server/
 
 ```
 Frontend
-```bash
+```
 cd client
 npm install && npm run dev
 ```
 
 ```
 backend
-```bash
+```
 cd server
 cd categories-service 
 npm install && npm start
